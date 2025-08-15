@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Vazir;
+  src: url("../public/fonts/Vazir.eot");
+  src: url("../public/fonts/Vazir.eot") format("embedded-opentype"),
+    url("../public/fonts/Vazir.woff") format("woff"),
+    url("../public/fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-Vazir: "Vazir";
+}
+@layer base {
+  body {
+    background-color: #f4f4f4;
+    font-family: "Vazir";
+  }
+
+  *,
+  ::before,
+  ::after,
+  ::backdrop,
+  ::file-selector-button {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
