@@ -10,6 +10,8 @@ import { Box, Slider } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../redux/slices/productSlices";
 import { useOutletContext } from "react-router";
+import photo from "../../public/images/Banner.svg";
+import photo1 from "../../public/images/iphoneblack.svg";
 const rtlCache = createCache({
   key: "muirtl",
   stylisPlugins: [prefixer, rtlPlugin],
@@ -450,7 +452,7 @@ function Home() {
             </ul>
           </div>
           <div className="w-[215px] h-[170px] bg-yellow-200 rounded-2xl">
-            <img src="../public/images/Banner.svg" alt="" />
+            <img src={photo} alt="" />
           </div>
         </div>
         <div className="flex-col bg-stone-100 ">
@@ -539,11 +541,7 @@ function Home() {
                       />
                     </svg>
 
-                    <img
-                      className="m-auto object-center"
-                      src="../public/images/iphoneblack.svg"
-                      alt=""
-                    />
+                    <img className="m-auto object-center" src={photo1} alt="" />
                   </div>
                   <div className="w-[90%] m-auto flex justify-between items-center">
                     <p className="text-gray-400 text-[16px] font-light font-Vazir ">

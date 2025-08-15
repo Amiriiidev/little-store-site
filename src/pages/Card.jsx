@@ -6,7 +6,7 @@ import {
   resetCard,
 } from "../redux/slices/cardSlices";
 import { Link } from "react-router";
-
+import photo7 from "../../public/images/image 7.svg";
 const Card = function () {
   const dispatch = useDispatch();
   const valueOfCard = useSelector((state) => state.card);
@@ -42,11 +42,7 @@ const Card = function () {
                 <div key={i.id}>
                   <li className="flex  w-[90%] m-auto mt-5 justify-between">
                     <div className="flex items-center space-x-5 ">
-                      <img
-                        className="w-[78px] h-[136px]"
-                        src="/public/images/image 7.svg"
-                        alt=""
-                      />
+                      <img className="w-[78px] h-[136px]" src={photo7} alt="" />
                       <div className="flex flex-col justify-evenly h-[100%]">
                         <p className=" font-medium text-xl text-slate-900">
                           {i.name}

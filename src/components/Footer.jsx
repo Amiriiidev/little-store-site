@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import photo from "../../public/images/image 14.svg";
 
 const Footer = function () {
   return (
@@ -38,11 +39,7 @@ const Footer = function () {
           </Link>
         </li>
         <li className="text-center flex flex-col space-y-1.5">
-          <img
-            className="bg-cover w-72 h-72 p-4"
-            src="../public/images/image 14.svg"
-            alt=""
-          />
+          <img className="bg-cover w-72 h-72 p-4" src={photo} alt="" />
           <div className="flex space-x-2 justify-center">
             <p>09180003535</p>
             <svg

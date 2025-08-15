@@ -2,12 +2,17 @@ import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router";
 import { addCard } from "../redux/slices/cardSlices";
-
+import photo from "../../public/images/image 9.svg";
+import photoBanner from "../../public/images/Banner.svg";
+import photoImg11 from "../../public/images/image 11.svg";
+import photoImg9 from "../../public/images/image 9.svg";
+import photoImg10 from "../../public/images/image 10.svg";
+import photoImg12 from "../../public/images/image 12.svg";
 const SingleProduct = function () {
   const cameraRef = useRef(null);
   const designRef = useRef(null);
   const battreyRef = useRef(null);
-  const [imgUrl, setImgUrl] = useState("../../public/images/image 9.svg");
+  const [imgUrl, setImgUrl] = useState(photo);
 
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.product);
@@ -92,11 +97,7 @@ const SingleProduct = function () {
             </div>
           </ul>
           <div>
-            <img
-              className="mt-64"
-              src="../../public/images/Banner.svg"
-              alt=""
-            />
+            <img className="mt-64" src={photoBanner} alt="" />
           </div>
           <div className="w-[215px] h-[188px] mt-4">
             <ul className="flex flex-col space-y-5  bg-[#FDFDFD] rounded-xl p-2 ">
@@ -185,27 +186,21 @@ const SingleProduct = function () {
                   />
                   <div className="flex space-x-2 mt-4">
                     <img
-                      onClick={() =>
-                        setImgUrl("../../public/images/image 11.svg")
-                      }
+                      onClick={() => setImgUrl(photoImg11)}
                       className="w-20 h-[91px] object-cover"
-                      src="../../public/images/image 11.svg"
+                      src={photoImg11}
                       alt=""
                     />
                     <img
-                      onClick={() =>
-                        setImgUrl("../../public/images/image 9.svg")
-                      }
+                      onClick={() => setImgUrl(photoImg9)}
                       className="w-20 h-[91px] object-contain"
-                      src="../../public/images/image 9.svg"
+                      src={photoImg9}
                       alt=""
                     />
                     <img
-                      onClick={() =>
-                        setImgUrl("../../public/images/image 10.svg")
-                      }
+                      onClick={() => setImgUrl(photoImg10)}
                       className="w-20 h-[91px] object-cover"
-                      src="../../public/images/image 10.svg"
+                      src={photoImg10}
                       alt=""
                     />
                   </div>
@@ -421,7 +416,7 @@ const SingleProduct = function () {
               </div>
 
               <div className="w-[538px] h-[407px] m-auto mt-5">
-                <img src="/public/images/image 12.svg" alt="" />
+                <img src={photoImg12} alt="" />
               </div>
 
               <div className="w-[80%] mt-20 m-auto">
