@@ -4,23 +4,28 @@ import SingleProduct from "./pages/SingleProduct";
 import Home from "./pages/Home";
 import Card from "./pages/Card";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "singleProduct/:id",
+          element: <SingleProduct />,
+        },
+        {
+          path: "card/:id",
+          element: <Card />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <MainLayout />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "singleProduct/:id",
-        element: <SingleProduct />,
-      },
-      {
-        path: "card/:id",
-        element: <Card />,
-      },
-    ],
-  },
-]);
+    basename: "/little-store-site", // ← اضافه کردن این خط
+  }
+);
